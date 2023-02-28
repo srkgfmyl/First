@@ -34,5 +34,8 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-      - name: Setup C/C++ Compiler
-      - uses: rlalik/setup-cpp-compiler@v1.2
+      - name: Install compiler
+        id: install_cc
+        uses: rlalik/setup-cpp-compiler@master
+        with:
+         compiler: latest
